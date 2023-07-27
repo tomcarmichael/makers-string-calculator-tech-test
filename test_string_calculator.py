@@ -8,3 +8,7 @@ def test_string_calculator_1():
 def test_string_calculator_2():
     input = '2'
     assert(string_calculator(input)) == ["2", 2.0]
+
+def test_string_calculator_3():
+    input = '10'
+    assert(string_calculator(input)) == ["10", 10.0]
