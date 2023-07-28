@@ -25,3 +25,7 @@ def test_string_calculator_6():
     input = '5 - 3'
     assert(string_calculator(input)) == ["5 - 3", 2.0]
 
+def test_string_calculator_7():
+    input = '12 / 4'
+    assert(string_calculator(input)) == ["12 / 4", 3.0]
+

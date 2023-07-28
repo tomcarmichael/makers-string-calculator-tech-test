@@ -8,5 +8,7 @@ def string_calculator(input_string):
             result = float(input_array[0]) + float(input_array[2])
         elif input_array[1] == '-':
             result = float(input_array[0]) - float(input_array[2])
+        elif input_array[1] == '/':
+            result = float(input_array[0]) / float(input_array[2])
 
         return [input_string, result]
