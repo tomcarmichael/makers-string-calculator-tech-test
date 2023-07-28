@@ -1,4 +1,7 @@
 def string_calculator(input_string):
+    if not type(input_string) is str:
+          raise TypeError("Argument must be a string")
+
     result = 0.0
 
     if input_string == '':

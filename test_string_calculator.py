@@ -37,4 +37,11 @@ def test_string_calculator_9():
     input = ''
     assert(string_calculator(input)) == ['',0.0]
 
+def test_string_calculator_10():
+     with pytest.raises(TypeError, match=r"Argument must be a string"):
+        string_calculator(False)
+
+def test_string_calculator_11():
+     with pytest.raises(TypeError, match=r"Argument must be a string"):
+        string_calculator(1234)
 
