@@ -25,7 +25,9 @@ def string_calculator(input_string):
         result = first_term - second_term
     elif input_array[1] == '/':
         result = first_term / second_term
-    else:
+    elif input_array[1] == '*':
         result = first_term * second_term
+    else:
+        raise Exception("Input should be a valid mathematical sum separated by spaces")
 
     return [input_string, result]
