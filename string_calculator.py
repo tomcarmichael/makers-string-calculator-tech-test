@@ -1,3 +1,8 @@
+class MathError(Exception):
+    def __init__(self):
+        super().__init__("Input should be a valid mathematical sum separated by spaces")
+
+
 def string_calculator(input_string):
     if not type(input_string) is str:
         raise TypeError("Argument must be a string")
@@ -8,16 +13,19 @@ def string_calculator(input_string):
         return [input_string, result]
 
     input_array = input_string.split(' ')
-
-    if len(input_array) == 1:
-        return [input_string, float(input_string)]
     
     try:
         first_term = float(input_array[0])
+    except(ValueError):
+        raise MathError()
+
+    if len(input_array) == 1:
+        return [input_string, first_term]
+    
+    try:
         second_term = float(input_array[2])
     except(ValueError):
-        raise Exception("Input should be a valid mathematical sum separated by spaces")
-
+        raise MathError()
 
     match input_array[1]:
         case '+':
@@ -29,6 +37,6 @@ def string_calculator(input_string):
         case '*':
             result = first_term * second_term
         case _:
-            raise Exception("Input should be a valid mathematical sum separated by spaces")
+            raise MathError()
 
     return [input_string, result]

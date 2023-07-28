@@ -52,3 +52,8 @@ def test_string_calculator_12():
 def test_string_calculator_13():
      with pytest.raises(Exception, match=r"Input should be a valid mathematical sum separated by spaces"):
         string_calculator('4 4 4')
+
+def test_string_calculator_14():
+     with pytest.raises(Exception, match=r"Input should be a valid mathematical sum separated by spaces"):
+        string_calculator('A')
+
