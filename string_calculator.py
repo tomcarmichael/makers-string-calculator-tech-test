@@ -1,6 +1,6 @@
 def string_calculator(input_string):
     if not type(input_string) is str:
-          raise TypeError("Argument must be a string")
+        raise TypeError("Argument must be a string")
 
     result = 0.0
 
@@ -12,8 +12,12 @@ def string_calculator(input_string):
     if len(input_array) == 1:
         return [input_string, float(input_string)]
     
-    first_term = float(input_array[0])
-    second_term = float(input_array[2])
+    try:
+        first_term = float(input_array[0])
+        second_term = float(input_array[2])
+    except(ValueError):
+        raise Exception("Input should be a valid mathematical sum separated by spaces")
+
 
     if input_array[1] == '+':
         result = first_term + second_term

@@ -45,3 +45,10 @@ def test_string_calculator_11():
      with pytest.raises(TypeError, match=r"Argument must be a string"):
         string_calculator(1234)
 
+def test_string_calculator_12():
+     with pytest.raises(Exception, match=r"Input should be a valid mathematical sum separated by spaces"):
+        string_calculator('The rain in Spain')
+
+def test_string_calculator_13():
+     with pytest.raises(Exception, match=r"Input should be a valid mathematical sum separated by spaces"):
+        string_calculator('4 4 4')
