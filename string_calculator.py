@@ -19,15 +19,16 @@ def string_calculator(input_string):
         raise Exception("Input should be a valid mathematical sum separated by spaces")
 
 
-    if input_array[1] == '+':
-        result = first_term + second_term
-    elif input_array[1] == '-':
-        result = first_term - second_term
-    elif input_array[1] == '/':
-        result = first_term / second_term
-    elif input_array[1] == '*':
-        result = first_term * second_term
-    else:
-        raise Exception("Input should be a valid mathematical sum separated by spaces")
+    match input_array[1]:
+        case '+':
+            result = first_term + second_term
+        case '-':
+            result = first_term - second_term
+        case '/':
+            result = first_term / second_term
+        case '*':
+            result = first_term * second_term
+        case _:
+            raise Exception("Input should be a valid mathematical sum separated by spaces")
 
     return [input_string, result]
