@@ -57,3 +57,12 @@ def test_string_calculator_14():
      with pytest.raises(Exception, match=r"Input should be a valid mathematical sum separated by spaces"):
         string_calculator('A')
 
+def test_string_calculator_15():
+    input = '5.0 * 4.0'
+    assert(string_calculator(input)) == ["5.0 * 4.0", 20.0]
+
+def test_string_calculator_16():
+    with pytest.raises(Exception, match=r"Maximum of two terms allowed in the sum"):
+        string_calculator('5.0 * 4.0 + 2 + 10')
+
+    
