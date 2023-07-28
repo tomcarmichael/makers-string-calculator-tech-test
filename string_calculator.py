@@ -1,4 +1,9 @@
 def string_calculator(input_string):
+    result = 0.0
+
+    if input_string == '':
+        return [input_string, result]
+
     input_array = input_string.split(' ')
 
     if len(input_array) == 1:
