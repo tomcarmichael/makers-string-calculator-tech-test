@@ -53,3 +53,11 @@ An array containing the inputted string, and a Number, the evaluation of the sum
 - Check for empty strings
 - Check for invalid args  
   
+
+### Getting Started
+
+`git clone https://github.com/tomcarmichael/makers-string-calculator-tech-test.git`
+
+`source venv/bin/activate`
+
+`pytest`
